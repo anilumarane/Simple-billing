@@ -1,3 +1,19 @@
+
+git hub
+1. first intialize the git hub for local
+    git init
+
+2.git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/anilumarane/Simple-billing.git
+
+3.then after add the all file
+    git status
+    git add all
+
+4.
+
+====================================================================================================
 def trigger_validator(value):
     if value['event_type'] not in ['click', 'submit']:
         raise serializers.ValidationError({'event_type': "Please provide a correct type of event"})
