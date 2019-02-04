@@ -1,0 +1,26 @@
+def trigger_validator(value):
+    if value['event_type'] not in ['click', 'submit']:
+        raise serializers.ValidationError({'event_type': "Please provide a correct type of event"})
+
+class TriggerSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Trigger
+        fields = ('id', 'event_type', 'events')
+        validators = [
+            trigger_validator
+        ]
+
+
+=======================================================================================
+user create for signup page.
+
+def create(self, validator_data):
+    username=validated_data['username']
+    user_obj=User(
+        username=username
+    )
+    user_obj.save()
+    return validated_data
+
+============================================================
