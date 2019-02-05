@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-from .views import (UserloginAPIView,
+from .views import (
                     LoginView, LogoutView)
 urlpatterns = [
     #path('admin/', admin.site.urls),
    # path('', include('account.urls')),
     path('user_reg', views.user_post),
-    path('user_login', views.user_login),
-    path('login1', UserloginAPIView.as_view()),
+    # path('user_login', views.user_login),
+    # path('login1', UserloginAPIView.as_view()),
 
     path('login', LoginView.as_view()),
     path('logout', LogoutView.as_view()),

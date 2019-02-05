@@ -11,7 +11,30 @@ git remote add origin https://github.com/anilumarane/Simple-billing.git
     git status
     git add all
 
-4.
+4.git push
+
+5. git push --set-upstream origin master
+
+6.branch craete new one
+    git branch branch1
+7.git checkout
+
+8.master to branch move
+     git checkout branch1
+9.branch to master
+    git checkout master
+
+10. git add --all
+11.git commit -m ""
+12.git push --set-upstream origin branch1
+13.if we can merge branch1 to master
+    git checkout master
+14. git merge branch1
+15. git commit -m "i have to change brach to master"
+16.git push
+17.git status
+
+
 
 ====================================================================================================
 def trigger_validator(value):

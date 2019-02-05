@@ -149,3 +149,9 @@ class Group_DetailSerilizer(serializers.ModelSerializer):
     class Meta:
         model=Group_details
         fields='__all__'
+
+
+    def validate(self, attrs):
+        pass
+
+    

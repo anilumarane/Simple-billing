@@ -111,12 +111,12 @@ class Create_item(models.Model):
     unit_choices = (("CBM", "CUBIC METERS"), ("CCM ", "CUBIC CENTIMETERS "), ("CMS", "CENTIMETERS"),
                      ("GMS", "GRAMMES"), ("KGS ", "KILOGRAMMES "), ("KLR", "KILOLITRE"),("KME", "KILOMETER"),
                     ("MLT ", "MILILITRE "), ("MTR", "METERS"),("OTH ", "OTHERS "), ("QTL", "QUINTAL"),("SQF", "SQUARE FEET "),\
-                    ("SQM", "SQUARE METERS"), ("TBS ", "TABLETS "), ("QTL", "QUINTAL"),
+                    ("SQM", "SQUARE METERS"), ("TBS ", "TABLETS "), ("QTL", "QUINTAL"),('SCH', 'SACHET'), ('NUM', 'NUMBERS'),
         )
     unit_name=models.CharField( choices=unit_choices, max_length=250)
     unit_quanity=models.IntegerField()
     unit_quanity_type_choices=(("BAG", "BAGS"), ("BOX ", "BOX "), ("BTL", "BOTTLES"),
-                     ("DOZ", "DOZENS"), ("BDL ", "BUNDLES "), ("CAN", "CANS"),("PAC", "PACKETS"),
+                     ("DOZ", "DOZENS"), ("BDL ", "BUNDLES "), ("CAN", "CANS"),("PAC", "PACKETS"),('SHEET', 'SHEETS'),
                     )
     unit_quanity_type=models.CharField(choices=unit_quanity_type_choices, max_length=250)
     unit_price=models.DecimalField(max_digits=5, decimal_places=3)
